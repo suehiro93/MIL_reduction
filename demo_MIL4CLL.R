@@ -57,7 +57,7 @@ for(C in Cs){
           message("train_acc: ", length(which((pr_train==syn_data_train$labels)==TRUE))/length(syn_data_train$labels))
           message("acc: ", length(which((pr_test==syn_data_test$labels)==TRUE))/length(syn_data_test$labels))
           test_acc <- length(which((pr_test==syn_data_test$labels)==TRUE))/length(syn_data_test$labels)
-          write.csv(matrix(c(test_acc, train_time),nrow = 1), file = paste(temp_dir,"/zours_result2_b_C",C,".csv",sep=""))
+          write.csv(matrix(c(test_acc, train_time),nrow = 1), file = paste(temp_dir,"/zours_result_C",C,".csv",sep=""))
           test_acc
         }
       }
